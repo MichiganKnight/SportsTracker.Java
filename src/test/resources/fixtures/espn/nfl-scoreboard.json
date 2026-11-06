@@ -1,0 +1,108 @@
+{
+    "leagues": [
+        {
+            "id": "28",
+            "name": "National Football League",
+            "abbreviation": "NFL",
+            "season": {
+                "year": 2026,
+                "displayName": "2026",
+                "type": {
+                    "id": "2",
+                    "type": 2,
+                    "name": "Regular Season",
+                    "abbreviation": "reg"
+                }
+            },
+            "calendarType": "week",
+            "logos": [
+                {
+                    "href": "https://example.com/nfl.png",
+                    "width": 500,
+                    "height": 500,
+                    "alt": "NFL",
+                    "rel": ["default"]
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "id": "123456789",
+            "name": "Green Bay Packers at Chicago Bears",
+            "date": "2026-11-08T18:00Z",
+            "neutralSite": false,
+            "competitions": [
+                {
+                    "id": "123456789",
+                    "status": {
+                        "period": 2,
+                        "displayClock": "08:42",
+                        "type": {
+                            "id": "2",
+                            "name": "STATUS_IN_PROGRESS",
+                            "state": "in",
+                            "completed": false,
+                            "description": "In Progress",
+                            "shortDetail": "8:42 - 2nd"
+                        }
+                    },
+                    "venue": {
+                        "id": "1",
+                        "fullName": "Soldier Field",
+                        "indoor": false,
+                        "address": {
+                            "city": "Chicago",
+                            "state": "IL"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "3",
+                            "homeAway": "home",
+                            "score": "14",
+                            "team": {
+                                "id": "3",
+                                "location": "Chicago",
+                                "name": "Bears",
+                                "displayName": "Chicago Bears",
+                                "abbreviation": "CHI",
+                                "color": "0B162A"
+                            },
+                            "records": [
+                                {
+                                    "name": "overall",
+                                    "summary": "5-3"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9",
+                            "homeAway": "away",
+                            "score": "21",
+                            "team": {
+                                "id": "9",
+                                "location": "Green Bay",
+                                "name": "Packers",
+                                "displayName": "Green Bay Packers",
+                                "abbreviation": "GB",
+                                "color": "203731"
+                            },
+                            "records": [
+                                {
+                                    "name": "overall",
+                                    "summary": "6-2"
+                                }
+                            ]
+                        }
+                    ],
+                    "situation": {
+                        "down": 2,
+                        "distance": 7,
+                        "yardLine": 35
+                    }
+                }
+            ]
+        }
+    ]
+}
