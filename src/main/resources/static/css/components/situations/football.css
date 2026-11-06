@@ -1,0 +1,363 @@
+﻿/* Football Situation */
+
+.football-situation {
+    width: 100%;
+}
+
+.football-field-wrapper {
+    width: 100%;
+}
+
+.football-field {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    border: 1px solid var(--st-border);
+    border-radius: .4rem;
+    overflow: hidden;
+    background-color: #477a3e;
+}
+
+.football-endzone {
+    width: 6%;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.football-endzone-left {
+    border-right: 2px solid rgba(255, 255, 255, .8);
+}
+
+.football-endzone-right {
+    border-left: 2px solid rgba(255, 255, 255, .8);
+}
+
+.football-playing-field {
+    position: relative;
+    flex: 1;
+}
+
+.football-yard-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(255, 255, 255, .35);
+}
+
+.football-midfield-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, .7);
+}
+
+/* Line to Gain */
+
+.football-first-down-line {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: var(--football-first-down-position);
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: #ffc107;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .4);
+    z-index: 1;
+}
+
+/* Ball / Line of Scrimmage */
+
+.football-ball-marker {
+    position: absolute;
+    top: 50%;
+    left: var(--football-position);
+    width: 16px;
+    height: 11px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: var(--football-team-color, #6c757d);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .45);
+    z-index: 2;
+}
+
+/* Yard Numbers */
+
+.football-yard-markers {
+    display: flex;
+    width: 100%;
+    height: 18px;
+}
+
+.football-yard-marker-spacer {
+    width: 6%;
+    flex-shrink: 0;
+}
+
+.football-yard-marker-field {
+    position: relative;
+    flex: 1;
+}
+
+.football-yard-number {
+    position: absolute;
+    top: 2px;
+    transform: translateX(-50%);
+    font-size: .65rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Situation Text */
+
+.football-field-info {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-top: .5rem;
+    font-size: .85rem;
+}
+
+.football-detail-field {
+    display: flex;
+    height: 135px;
+    border: 1px solid var(--st-border);
+    border-radius: .5rem;
+    overflow: hidden;
+    color: #fff;
+}
+
+.football-detail-endzone {
+    flex: 0 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
+}
+
+.football-detail-endzone:first-child {
+    border-right: 2px solid rgba(255, 255, 255, .85);
+}
+
+.football-detail-endzone:last-child {
+    border-left: 2px solid rgba(255, 255, 255, .85);
+}
+
+.football-detail-playing {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: repeating-linear-gradient(90deg, #397b52 0%, #397b52 9.8%, #4b9060 10%, #4b9060 20%);
+}
+
+.football-detail-yard-number {
+    position: absolute;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.55rem, 1.1vw, 0.9rem);
+    font-weight: 800;
+    line-height: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.football-detail-yard-number-top {
+    top: 12%;
+}
+
+.football-detail-yard-number-bottom {
+    bottom: 12%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.football-detail-yard {
+    position: absolute;
+    height: 100%;
+    border-left: 1px solid #ffffff75;
+}
+
+.football-detail-gain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #ffcd37;
+    z-index: 4;
+}
+
+.football-detail-ball {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 13px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #693b20;
+    z-index: 5;
+}
+
+.football-detail-ball,
+.football-detail-gain {
+    transition-property: left;
+    transition-duration: var(--football-playback-animation-duration, 0ms);
+    transition-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .football-detail-ball,
+    .football-detail-gain {
+        transition-duration: 0ms !important;
+    }
+}
+
+.baseball-detail-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.baseball-detail-svg {
+    width: min(100%, 310px);
+    height: auto;
+}
+
+.baseball-detail-stats {
+    min-width: 130px;
+}
+
+.football-detail-legend-ball,
+.football-detail-legend-gain {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.football-detail-legend-ball {
+    width: 12px;
+    height: 9px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #693b20;
+}
+
+.football-detail-legend-gain {
+    width: 4px;
+    height: 13px;
+    background: #ffcd37;
+}
+
+/* Historical Football Playback */
+
+.football-playback-timeline {
+    padding: 0.75rem 0.25rem;
+}
+
+.football-playback-seek {
+    --playback-progress: 0%;
+    cursor: pointer;
+    margin-bottom: 0.35rem;
+}
+
+.football-playback-seek::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(to right, var(--bs-primary) 0%, var(--bs-primary) var(--playback-progress), var(--bs-secondary-bg) var(--playback-progress), var(--bs-secondary-bg) 100%);
+}
+
+.football-playback-seek::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--bs-secondary-bg);
+}
+
+.football-playback-seek::-moz-range-progress {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--bs-primary);
+}
+
+.football-playback-controls .btn {
+    min-height: 34px;
+}
+
+/* Historical Drive Navigation */
+
+.football-playback-controls [data-playback-action="previous-drive"],
+.football-playback-controls [data-playback-action="next-drive"] {
+    white-space: nowrap;
+}
+
+.football-playback-controls [data-playback-action="previous-drive"]:disabled,
+.football-playback-controls [data-playback-action="next-drive"]:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.football-playback-toggle {
+    min-width: 90px;
+    font-weight: 600;
+}
+
+.football-playback-speed select {
+    width: 85px;
+    cursor: pointer;
+}
+
+.football-playback-speed label {
+    white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+    .football-playback-controls {
+        gap: 0.5rem;
+    }
+
+    .football-playback-speed {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Playback Events */
+
+.football-playback-event {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.football-playback-event[hidden] {
+    display: none !important;
+}
+
+.football-playback-description {
+    border-left: 3px solid transparent;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.football-playback-is-scoring .football-playback-description {
+    border-left-color: var(--bs-success);
+    background-color: rgba(25, 135, 84, 0.12);
+}
+
+.football-playback-possession-changed:not(.football-playback-is-scoring)
+.football-playback-description {
+    border-left-color: var(--bs-info);
+    background-color: rgba(13, 202, 240, 0.08);
+}

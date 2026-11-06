@@ -1,0 +1,202 @@
+﻿.golf-event-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.golf-leaders {
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.golf-leader-row {
+    display: grid;
+    grid-template-columns: 2rem 1.5rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.golf-leader-position {
+    text-align: center;
+    font-weight: 600;
+}
+
+.golf-country-flag {
+    width: 32px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.golf-leader-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.golf-leader-score {
+    font-weight: 700;
+    text-align: right;
+}
+
+.golf-leaderboard-table {
+    background-color: var(--st-table-bg);
+}
+
+.golf-leaderboard-table tbody tr:hover {
+    background-color: var(--st-table-hover);
+}
+
+.golf-leaderboard-row {
+    transition: background-color .15s ease;
+}
+
+.golf-leaderboard-row:hover {
+    background-color: var(--bs-tertiary-bg);
+}
+
+.golf-scorecard-container {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--bs-border-color);
+    background-color: var(--st-table-row-alt);
+}
+
+.golf-round-scorecard {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.golf-round-scorecard:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0 !important;
+}
+
+.golf-scorecard-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+}
+
+.golf-scorecard-chevron {
+    display: inline-block;
+    transition: transform var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.golf-scorecard-toggle[aria-expanded="true"] .golf-scorecard-chevron {
+    transform: rotate(180deg);
+}
+
+.golf-scorecard-table {
+    min-width: 900px;
+}
+
+.golf-scorecard-table td {
+    height: 2.75rem;
+}
+
+.golf-scorecard-table th,
+.golf-scorecard-table td {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.golf-scorecard-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--st-table-header);
+    border-bottom: 1px solid var(--st-border);
+    border-radius: 0.5rem;
+}
+
+.golf-scorecard-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--st-text-muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.golf-score-legend-marker {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0;
+    flex-shrink: 0;
+}
+
+.golf-score-birdie,
+.golf-score-eagle,
+.golf-score-bogey,
+.golf-score-double-bogey {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.golf-score-birdie {
+    color: var(--bs-success);
+    border: 2px solid var(--bs-success);
+    border-radius: 50%;
+    background-color: rgba(var(--bs-success-rgb), .08);
+}
+
+.golf-score-eagle {
+    color: var(--bs-warning);
+    border: 2px solid var(--bs-warning);
+    border-radius: 50%;
+    background-color: rgba(var(--bs-warning-rgb), .14);
+}
+
+.golf-score-par {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--st-border);
+    border-radius: 0.25rem;
+}
+
+.golf-score-eagle::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 2px solid var(--bs-warning);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.golf-score-bogey {
+    color: var(--bs-danger);
+    border: 2px solid var(--bs-danger);
+    background-color: rgba(var(--bs-danger-rgb), .08);
+}
+
+.golf-score-double-bogey {
+    color: var(--bs-info);
+    border: 2px solid var(--bs-info);
+    background-color: rgba(var(--bs-info-rgb), .14);
+}
+
+.golf-score-double-bogey::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 2px solid var(--bs-info);
+    pointer-events: none;
+}

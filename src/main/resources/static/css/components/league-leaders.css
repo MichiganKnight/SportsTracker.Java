@@ -1,0 +1,188 @@
+﻿/* League Leaders */
+
+.leaders-card {
+    overflow: hidden;
+}
+
+.leaders-card-header {
+    padding: .8rem 1rem;
+}
+
+.leaders-card-header h5 {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.leaders-card-abbreviation {
+    color: var(--st-text-muted);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+}
+
+/* Table */
+
+.leaders-table {
+    margin: 0;
+    color: var(--st-text);
+}
+
+.leaders-table thead th {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-bottom: 1px solid var(--st-border);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.leaders-table tbody td {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-color: var(--st-border);
+    vertical-align: middle;
+}
+
+.leaders-table tbody tr {
+    transition: background-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.leaders-table tbody tr:hover {
+    background: rgba(255, 255, 255, .035);
+}
+
+.leaders-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Rank */
+
+.leaders-rank {
+    width: 42px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Player */
+
+.leaders-player {
+    min-width: 180px;
+}
+
+.leaders-player-image-link {
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+.leaders-player-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+}
+
+.leaders-player-image {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.leaders-player-fallback-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.leaders-player-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.leaders-player-name {
+    color: inherit;
+    font-size: .86rem;
+    font-weight: 650;
+    line-height: 1.15;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.leaders-player-name:hover {
+    text-decoration: underline;
+}
+
+/* Team */
+
+.leaders-team {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    width: fit-content;
+    margin-top: .15rem;
+    color: var(--st-text-muted);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-decoration: none;
+}
+
+.leaders-team img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.leaders-team:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Value */
+
+.leaders-value {
+    min-width: 58px;
+
+    font-size: .86rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Leaders Filters */
+
+.leaders-section-filter .btn {
+    min-width: 82px;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+    .leaders-player {
+        min-width: 160px;
+    }
+
+    .leaders-player-name {
+        font-size: .82rem;
+    }
+
+    .leaders-player-image-wrap {
+        width: 30px;
+        height: 30px;
+    }
+
+    .leaders-player-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .leaders-player-fallback-logo {
+        width: 24px;
+        height: 24px;
+    }
+}

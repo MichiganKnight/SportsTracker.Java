@@ -1,0 +1,92 @@
+﻿.navbar-sports {
+    background-color: var(--st-navbar);
+    color: var(--st-text);
+    border-bottom: 1px solid var(--st-border);
+}
+
+.navbar-sports .navbar-brand {
+    color: var(--st-text);
+    font-weight: 700;
+    transition: color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.form-search-sports {
+    min-width: 350px;
+    background-color: var(--st-surface-alt);
+    color: var(--st-text);
+    border: 1px solid var(--st-border);
+    transition: background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), color var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), box-shadow var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.form-search-sports::placeholder {
+    color: var(--st-text-muted);
+    opacity: .8;
+}
+
+.form-search-sports:hover {
+    border-color: var(--st-card-hover-border);
+}
+
+.form-search-sports:focus {
+    background-color: var(--st-surface-alt);
+    color: var(--st-text);
+    box-shadow: 0 0 0 .2rem rgba(var(--st-primary-rgb), .15);
+    outline: 0;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    padding: 0;
+    background-color: var(--st-surface-alt);
+    color: var(--st-text-muted);
+    border: 1px solid var(--st-border);
+    border-radius: 50%;
+    transition: background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), color var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), transform var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.theme-toggle:hover {
+    background-color: var(--st-surface);
+    color: var(--st-text);
+    border-color: var(--st-card-hover-border);
+}
+
+.theme-toggle:active {
+    transform: scale(.95);
+}
+
+.theme-toggle:focus-visible {
+    outline-offset: 2px;
+}
+
+.theme-toggle i {
+    font-size: 1rem;
+}
+
+.navbar-controls {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: min(100%, 400px);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-controls {
+        width: auto;
+    }
+
+    .form-search-sports {
+        min-width: 0;
+        width: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .form-search-sports {
+        display: none;
+    }
+} 

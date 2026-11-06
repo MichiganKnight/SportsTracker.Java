@@ -1,0 +1,47 @@
+﻿.sidebar {
+    background: var(--st-sidebar);
+    border-right: 1px solid var(--st-border);
+}
+
+.sidebar-header {
+    padding: .5rem 1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--st-text-muted);
+    text-transform: uppercase;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--st-text);
+    background-color: transparent;
+    border: 0;
+}
+
+.list-group-item:hover {
+    background: var(--st-surface-alt);
+    color: var(--st-text);
+    border-radius: 8px;
+}
+
+.list-group-item > span {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.league-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.league-logo-dark {
+    display: none;
+}

@@ -1,0 +1,66 @@
+.table {
+    --bs-table-bg: var(--st-table-bg);
+    --bs-table-color: var(--st-text);
+    --bs-table-border-color: var(--st-border);
+    
+    --bs-table-striped-bg: var(--st-table-row-alt);
+    --bs-table-striped-color: var(--st-text);
+    
+    --bs-table-hover-bg: var(--st-table-hover);
+    --bs-table-hover-color: var(--st-text);
+    
+    margin-bottom: 0;
+    
+    color: var(--st-text);
+    border-color: var(--st-border);
+}
+
+.table > :not(caption) > * > * {
+    padding: .75rem .85rem;
+    background-color: var(--bs-table-bg);
+    color: var(--bs-table-color);
+    border-bottom-color: var(--st-border);
+}
+
+.table thead th {
+    background-color: var(--st-table-header);
+    border-radius: 4px;
+    overflow-x: auto;
+    border: 1px solid var(--st-border);
+}
+
+.table-responsive > .table {
+    border: 0;
+}
+
+.table-sm > :not(caption) > * > * {
+    padding: .45rem .6rem;
+}
+
+.table tfoot th,
+.table tfoot td {
+    background-color: var(--st-table-bg);
+    color: var(--st-text);
+    font-weight: 600;
+    border-top: 2px solid var(--st-border);
+}
+
+.table .text-secondary {
+    color: var(--st-text-muted) !important;
+}
+
+.table a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.table a:hover {
+    color: var(--st-primary);
+}
+
+.table-empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--st-text-muted);
+    background-color: var(--st-table-bg);
+}

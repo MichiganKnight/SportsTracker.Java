@@ -1,0 +1,791 @@
+﻿/* Athlete Header */
+
+.athlete-header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    flex: 0 0 120px
+}
+
+.athlete-headshot,
+.athlete-headshot-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.athlete-headshot {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-headshot-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--st-surface-alt);
+    color: var(--st-text-muted);
+    font-size: 4rem;
+}
+
+.athlete-header-info {
+    min-width: 0;
+}
+
+.athlete-meta {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: var(--st-text-muted);
+}
+
+.athlete-team-link,
+.athlete-country {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--st-text);
+    text-decoration: none;
+}
+
+.athlete-team-link {
+    transition: color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.athlete-team-link:hover {
+    color: var(--st-primary);
+}
+
+.athlete-team-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.athlete-team-logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .athlete-team-logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .athlete-team-logo-dark {
+    display: block;
+}
+
+.athlete-country-flag {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Quick Stats */
+
+.athlete-stat-card {
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-stat-value {
+    color: var(--st-text);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.athlete-stat-label {
+    margin-top: .2rem;
+    color: var(--st-text-muted);
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.athlete-stat-rank {
+    margin-top: .25rem;
+    color: var(--st-text-muted);
+    font-size: .75rem;
+}
+
+/* Bio */
+
+.athlete-bio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.athlete-bio-item {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: .85rem 1rem;
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-bio-label {
+    color: var(--st-text-muted);
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.athlete-bio-value {
+    color: var(--st-text);
+    font-weight: 500;
+}
+
+.athlete-bio-item-wide {
+    grid-column: span 2;
+}
+
+/* Athlete Overview */
+
+.athlete-overview-card {
+    overflow: hidden;
+}
+
+.athlete-section-header {
+    padding: .8rem 1rem;
+    font-size: .85rem;
+    font-weight: 650;
+    letter-spacing: .025em;
+}
+
+/* Overview Statistics */
+
+.athlete-statistics-table-wrap {
+    border: 0;
+    border-radius: 0;
+}
+
+.athlete-statistics-table {
+    min-width: 650px;
+}
+
+.athlete-statistics-table thead th {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    font-size: .72rem;
+}
+
+.athlete-statistics-table tbody th,
+.athlete-statistics-table tbody td {
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+.athlete-stat-row-label {
+    min-width: 125px;
+    color: var(--st-text);
+    font-size: .83rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.athlete-stat-cell {
+    min-width: 58px;
+    color: var(--st-text);
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.athlete-statistics-table tbody tr {
+    transition: background-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.athlete-statistics-table tbody tr:hover > * {
+    background-color: var(--st-table-hover);
+}
+
+/* Shared Overview Content */
+
+.athlete-content-header {
+    margin-bottom: .5rem;
+    color: var(--st-text);
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.athlete-content-description {
+    color: var(--st-text-muted);
+    font-size: .9rem;
+    line-height: 1.55;
+}
+
+/* Analysis */
+
+.athlete-analysis-body {
+    padding: 1.1rem 1.25rem;
+}
+
+.athlete-analysis-story {
+    margin-top: .9rem;
+    color: var(--st-text);
+    font-size: .92rem;
+    line-height: 1.65;
+}
+
+/* News */
+
+.athlete-news-layout {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.athlete-news-image-wrap {
+    overflow: hidden;
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-news-image {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.athlete-news-content {
+    min-width: 0;
+}
+
+.athlete-news-date {
+    margin-top: .75rem;
+    color: var(--st-text-muted);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+/* Awards */
+
+.athlete-awards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.athlete-award-item {
+    padding: .9rem 1rem;
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-award-name {
+    color: var(--st-text);
+    font-weight: 600;
+}
+
+.athlete-award-count,
+.athlete-award-seasons {
+    margin-top: .25rem;
+    color: var(--st-text-muted);
+    font-size: .8rem;
+}
+
+/* Fantasy */
+
+.athlete-fantasy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.athlete-fantasy-projection {
+    grid-column: 1 / -1;
+}
+
+.athlete-fantasy-projection-text {
+    margin-top: .25rem;
+    color: var(--st-text);
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Overview Metrics */
+
+.athlete-golf-ranking-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.athlete-overview-metric {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: .9rem 1rem;
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+    background-color: var(--st-surface-alt);
+}
+
+.athlete-overview-metric-label {
+    color: var(--st-text-muted);
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.athlete-overview-metric-value {
+    color: var(--st-text);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Golf Results */
+
+.athlete-golf-results-table {
+    min-width: 700px;
+}
+
+.athlete-golf-results-table tbody th {
+    min-width: 220px;
+    font-weight: 600;
+}
+
+.athlete-golf-results-table tbody tr:hover > * {
+    background-color: var(--st-table-hover);
+}
+
+/* Athlete Stats Buttons */
+
+.athlete-stats-category-nav {
+    overflow-x: auto;
+}
+
+.athlete-stats-category-nav .btn-group {
+    flex-wrap: nowrap;
+}
+
+.athlete-stats-category-button {
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/* Full Athlete Stats */
+
+.athlete-stats-category {
+    overflow: hidden;
+}
+
+.athlete-stats-table-wrap {
+    border: 0;
+    border-radius: 0;
+}
+
+.athlete-stats-table {
+    min-width: 850px;
+}
+
+.athlete-stats-table thead th {
+    font-size: .72rem;
+}
+
+.athlete-stats-table tbody th,
+.athlete-stats-table tbody td,
+.athlete-stats-table tfoot th,
+.athlete-stats-table tfoot td {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+}
+
+.athlete-stats-season {
+    min-width: 75px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.athlete-stats-team {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-width: 70px;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.athlete-stats-team-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.athlete-stats-team-logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .athlete-stats-team-logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .athlete-stats-team-logo-dark {
+    display: block;
+}
+
+.athlete-stats-table tbody tr:hover > * {
+    background-color: var(--st-table-hover);
+}
+
+.athlete-stats-table tfoot > tr > * {
+    font-weight: 700;
+}
+
+/* Athlete Game Log */
+
+.athlete-gamelog-card {
+    overflow: hidden;
+}
+
+.athlete-gamelog-table-wrap {
+    border: 0;
+    border-radius: 0;
+}
+
+.athlete-gamelog-table {
+    min-width: 950px;
+}
+
+.athlete-gamelog-table thead th {
+    font-size: .72rem;
+}
+
+.athlete-gamelog-table tbody td,
+.athlete-gamelog-table tbody th,
+.athlete-gamelog-table tfoot td,
+.athlete-gamelog-table tfoot th {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+}
+
+.athlete-gamelog-date-column {
+    min-width: 80px;
+}
+
+.athlete-gamelog-opponent-column {
+    min-width: 150px;
+}
+
+.athlete-gamelog-result-column {
+    min-width: 90px;
+}
+
+.athlete-gamelog-date {
+    color: var(--st-text-muted);
+    font-size: .82rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.athlete-gamelog-opponent-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--st-text);
+    text-decoration: none;
+}
+
+.athlete-gamelog-opponent-link:hover {
+    color: var(--st-primary);
+}
+
+.athlete-gamelog-opponent-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.athlete-gamelog-note {
+    margin-top: .2rem;
+    color: var(--st-text-muted);
+    font-size: .72rem;
+}
+
+.athlete-gamelog-result {
+    align-items: center;
+    justify-content: center;
+    gap: .35rem;
+}
+
+.athlete-gamelog-score {
+    color: var(--st-text-muted);
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.athlete-gamelog-stat {
+    min-width: 58px;
+    font-size: .84rem;
+    font-weight: 500;
+}
+
+.athlete-gamelog-table tbody tr:hover > * {
+    background-color: var(--st-table-hover);
+}
+
+.athlete-gamelog-table tfoot > tr > * {
+    font-weight: 700;
+}
+
+/* Athlete Game Log Navigation */
+
+.athlete-gamelog-season-nav {
+    overflow-x: auto;
+}
+
+.athlete-gamelog-season-nav .btn-group {
+    flex-wrap: nowrap;
+}
+
+.athlete-gamelog-season-button {
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/* Athlete Splits */
+
+.athlete-splits-category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--st-border);
+}
+
+.athlete-splits-category-button {
+    white-space: nowrap;
+}
+
+.athlete-splits-category-panel {
+    width: 100%
+}
+
+.athlete-splits-table {
+    width: 100%;
+    min-width: max-content;
+    color: var(--st-text);
+}
+
+.athlete-splits-table th {
+    padding: .75rem;
+    background-color: var(--st-table-header);
+    color: var(--st-text-muted);
+    font-size: .75rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.athlete-splits-table td {
+    padding: .75rem;
+
+    vertical-align: middle;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+.athlete-splits-table tbody tr:nth-child(even) {
+    background-color: var(--st-table-row-alt);
+}
+
+.athlete-splits-table tbody tr:hover {
+    background-color: var(--st-table-hover);
+}
+
+.athlete-splits-name-column,
+.athlete-splits-name {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 150px;
+    text-align: left !important;
+    background-color: var(--st-surface);
+}
+
+.athlete-splits-table tbody tr:nth-child(even),
+.athlete-splits-name {
+    background-color: var(--st-table-row-alt);
+}
+
+.athlete-splits-table tbody tr:hover,
+.athlete-splits-name {
+    background-color: var(--st-table-hover);
+}
+
+.athlete-splits-name {
+    color: var(--st-text);
+
+    font-weight: 600;
+}
+
+/* Athlete Navigation */
+
+.athlete-page .btn-group {
+    flex-wrap: wrap;
+}
+
+.athlete-page .btn-group .btn {
+    font-weight: 500;
+}
+
+/* Theme Transitions */
+
+.athlete-headshot,
+.athlete-headshot-placeholder,
+.athlete-stat-card,
+.athlete-bio-item,
+.athlete-news-image-wrap {
+    transition: background-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), border-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+/* Athlete Favorites */
+
+.athlete-favorite-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    transition: color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), background-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), border-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.athlete-favorite-button i {
+    color: var(--st-text-muted);
+}
+
+.athlete-favorite-button.is-favorite {
+    color: var(--st-warning);
+    border-color: var(--st-warning);
+}
+
+.athlete-favorite-button.is-favorite i {
+    color: var(--st-warning);
+}
+
+.athlete-favorite-button.is-favorite:hover {
+    color: var(--st-warning);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .athlete-header-wrap {
+        width: 96px;
+        height: 96px;
+        flex-basis: 96px;
+    }
+
+    .athlete-headshot,
+    .athlete-headshot-placeholder {
+        width: 110px;
+        height: 110px;
+    }
+
+    .athlete-name {
+        font-size: 1.6rem;
+    }
+
+    .athlete-bio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .athlete-news-layout {
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .athlete-news-image {
+        height: 95px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .athlete-bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .athlete-bio-item-wide {
+        grid-column: auto;
+    }
+
+    .athlete-news-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .athlete-news-image-wrap {
+        max-width: 100%;
+    }
+
+    .athlete-news-image {
+        height: 180px;
+    }
+
+    .athlete-analysis-body {
+        padding: 1rem;
+    }
+
+    .athlete-page .btn-group {
+        display: flex;
+        width: 100%;
+    }
+
+    .athlete-page .btn-group .btn {
+        flex: 1 1 auto;
+    }
+}
+
+/* Additional Responsiveness */
+
+@media (max-width: 991.98px) {
+    .athlete-fantasy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .athlete-golf-ranking-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .athlete-fantasy-projection {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .athlete-awards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .athlete-awards-grid,
+    .athlete-fantasy-grid,
+    .athlete-golf-ranking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .athlete-fantasy-projection {
+        grid-column: auto;
+    }
+}

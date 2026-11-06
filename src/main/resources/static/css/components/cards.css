@@ -1,0 +1,221 @@
+﻿/* Cards  */
+
+.card {
+    background: var(--st-surface);
+    color: var(--st-text);
+    border: 1px solid var(--st-border);
+    border-radius: .7rem;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--st-border);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.game-card {
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+.game-card:has(.stretched-link:focus-visible) {
+    outline: 2px solid var(--st-primary);
+    outline-offset: 2px;
+}
+
+.game-card .border-top {
+    border-color: var(--st-border) !important;
+}
+
+.game-card .badge {
+    letter-spacing: .05em;
+    font-size: .72rem;
+}
+
+.game-team-surface {
+    background-color: var(--st-game-team-surface);
+    
+    border: 1px solid var(--st-border);
+}
+
+/* Game Status */
+
+.game-status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.game-status-main {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    min-width: 0;
+}
+
+.game-status-separator {
+    margin: 0 .3rem;
+}
+
+.game-situation-inline {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.game-situation-separator {
+    margin: 0 .25rem;
+}
+
+/* Live Indicator */
+
+.game-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    animation: live-badge-pulse 2s ease-in-out infinite;
+}
+
+.game-live-dot {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+    animation: live-dot-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes live-badge-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: .75;
+    }
+}
+
+@keyframes live-dot-pulse {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    50% {
+        opacity: .4;
+        transform: scale(.75);
+    }
+}
+
+/* Last Play */
+
+.game-last-play {
+    display: flex;
+    align-items: flex-start;
+    gap: .65rem;
+    min-width: 0;
+    padding-top: .65rem;
+    border-top: 1px solid var(--st-border);
+}
+
+.game-last-play-label {
+    flex: 0 0 auto;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.game-last-play-text {
+    min-width: 0;
+    max-width: 100%;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+/* Score Change */
+
+.game-card.score-changed {
+    animation: game-score-change .9s ease-out;
+}
+
+@keyframes game-score-change {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--st-success-rgb), .55);
+    }
+
+    40% {
+        box-shadow: 0 0 0 4px rgba(var(--st-success-rgb), .25);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--st-success-rgb), 0);
+    }
+}
+
+.st-surface-alt {
+    background-color: var(--st-surface-alt);
+    color: var(--st-text);
+}
+
+.card-interactive {
+    transition: transform var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), box-shadow var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), color var(--st-theme-transition-duration) var(--st-theme-transition-easing);
+}
+
+.card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--st-card-hover-shadow);
+    border-color: var(--st-card-hover-border);
+}
+
+/* Responsive */
+
+@media (max-width: 575.98px) {
+    .game-status-row {
+        align-items: flex-start;
+        gap: .65rem;
+    }
+
+    .game-status-main {
+        flex-wrap: wrap;
+        gap: .45rem;
+    }
+
+    .game-last-play {
+        flex-direction: column;
+        gap: .3rem;
+    }
+
+    .game-last-play-text {
+        font-size: .8rem;
+    }
+}
+
+.game-favorite-badge {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    color: var(--bs-warning);
+    background: var(--st-surface);
+    border: 1px solid var(--st-border);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    pointer-events: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.12);
+}

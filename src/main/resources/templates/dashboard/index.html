@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title th:text="${pageTitle} + ' - SportsTracker'">
+            SportsTracker
+        </title>
+
+        <link rel="stylesheet" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+    </head>
+    <body>
+        <div class="container py-4">
+            <h1 th:text="${heading}">
+                SportsTracker Dashboard
+            </h1>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Java SportsTracker
+                    </h5>
+
+                    <p class="card-text">
+                        Spring Boot, Maven, and Thymeleaf are working successfully.
+                    </p>
+
+                    <span class="badge bg-success">
+                        Application Running
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <script th:src="@{/lib/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+    </body>
+</html>

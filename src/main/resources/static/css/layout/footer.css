@@ -1,0 +1,5 @@
+﻿footer {
+    background: var(--st-navbar);
+    border-top: 1px solid var(--st-border);
+    color: var(--st-text-muted);
+}

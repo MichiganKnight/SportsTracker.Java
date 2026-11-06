@@ -1,0 +1,122 @@
+﻿/* Baseball Situation */
+
+.baseball-situation {
+    width: 100%;
+}
+
+.baseball-live-info {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Baseball Diamond */
+
+.baseball-diamond-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.diamond {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+}
+
+.diamond .middle {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.base {
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border: 2px solid var(--st-border);
+    transform: rotate(45deg);
+    transition: background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing);
+}
+
+.base.occupied {
+    background: #ffc107;
+    border-color: #ffc107;
+}
+
+.base.home {
+    width: 10px;
+    height: 10px;
+    transform: none;
+    clip-path: polygon(50% 0%, 100% 45%, 80% 100%, 20% 100%, 0% 45%);
+    background: rgba(255, 255, 255, .9);
+    border: none;
+}
+
+/* Shared Baseball Labels */
+
+.baseball-section-label {
+    flex: 0 0 auto;
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+/* Due Up */
+
+.baseball-due-up {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    min-width: 0;
+    padding-top: .65rem;
+    border-top: 1px solid var(--st-border);
+}
+
+.baseball-due-up-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .35rem;
+    min-width: 0;
+}
+
+.baseball-due-up-player {
+    color: var(--st-text);
+    font-size: .78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.baseball-due-up-player:not(:last-child)::after {
+    content: "•";
+    margin-left: .3rem;
+}
+
+@media (max-width: 575.98px) {
+    .baseball-due-up {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .3rem;
+    }
+}
+
+.baseball-detail-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.baseball-detail-svg {
+    width: min(100%, 310px);
+    height: auto;
+}
+
+.baseball-detail-stats {
+    min-width: 130px;
+}

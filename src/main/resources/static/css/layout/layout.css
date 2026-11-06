@@ -1,0 +1,9 @@
+﻿body {
+    background: var(--st-bg);
+    color: var(--st-text);
+}
+
+main {
+    background: var(--st-bg);
+    min-height: calc(100vh - var(--st-navbar-height));
+}

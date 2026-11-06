@@ -1,0 +1,88 @@
+﻿.game-details-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.game-details-live-status {
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .05em;
+}
+
+.game-details-score {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.game-linescore {
+    color: var(--st-text);
+}
+
+.game-linescore th,
+.game-linescore td {
+    min-width: 38px;
+    white-space: nowrap;
+}
+
+.game-linescore th:first-child,
+.game-linescore td:first-child {
+    min-width: 90px;
+    text-align: left;
+}
+
+.game-linescore thead th {
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+.game-linescore tbody td {
+    border-color: var(--st-border);
+    font-size: .85rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.game-linescore-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.game-detail-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: .45rem 0;
+    border-bottom: 1px solid var(--st-border);
+}
+
+.game-detail-info-row:last-child {
+    border-bottom: 0;
+}
+
+.game-featured-athlete {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.game-featured-athlete-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.game-summary-headline {
+    color: var(--st-text);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.game-summary-text {
+    font-size: .88rem;
+    line-height: 1.55;
+}

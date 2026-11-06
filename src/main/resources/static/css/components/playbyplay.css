@@ -1,0 +1,158 @@
+﻿/* Play-by-Play */
+
+.play-period {
+    margin-bottom: 1.25rem;
+}
+
+.play-period-header {
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+/* Sticky Header */
+
+.game-page-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    padding-top: .5rem;
+    padding-bottom: .75rem;
+    background: var(--st-bg);
+}
+
+/* Play Row */
+
+.game-play {
+    padding: .8rem 1rem;
+    border-bottom: 1px solid var(--st-border);
+    transition: background-color .6s ease, box-shadow .6s ease;    
+}
+
+.game-play-team {
+    border-left: 6px solid var(--play-team-color);
+    border-right: 6px solid var(--play-team-color);
+    border-radius: .4rem;
+}
+
+.game-play-team::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .035;
+    pointer-events: none;
+}
+
+.game-play-team > * {
+    position: relative;
+    z-index: 1;
+}
+
+.game-play-new {
+    background-color: rgba(var(--bs-primary-rgb), .12);
+    box-shadow: inset 4px 0 0 rgba(var(--bs-primary-rgb), .65);
+}
+
+.game-play:last-child {
+    border-bottom: 0;
+}
+
+.game-play:hover {
+    background-color: var(--st-table-hover);
+}
+
+.game-play-main {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+}
+
+/* Marker */
+
+.game-play-marker {
+    width: 16px;
+    flex: 0 0 16px;
+    display: flex;
+    justify-content: center;
+    padding-top: .35rem;
+    color: var(--bs-danger);
+    font-size: .48rem;
+}
+
+/* Content */
+
+.game-play-content {
+    flex: 1;
+    min-width: 0;    
+}
+
+.game-play-meta {
+    display: flex;
+    justify-content: flex-start;
+    gap: .75rem;
+}
+
+.game-play-clock {
+    min-width: 3rem;
+}
+
+.game-play-situation {
+    flex: initial;
+}
+
+.game-play-context {
+    font-weight: 400;
+    opacity: .75;
+}
+
+.game-play-context::before {
+    content: "•";
+    margin-right: .5rem;
+}
+
+.game-play-text {
+    line-height: 1.4;
+}
+
+.game-play-type {
+    text-transform: capitalize;
+}
+
+/* Score */
+
+.game-play-score {
+    flex: 0 0 auto;
+    padding: .2rem .45rem;
+    border: 1px solid var(--st-border);
+    border-radius: .4rem;
+    color: var(--st-text);
+    font-size: .72rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Scoring */
+
+.game-play-scoring {
+    background: rgba(25, 135, 84, .06);
+}
+
+.game-play-scoring .game-play-text {
+    font-weight: 700;
+}
+
+/* Filters */
+
+.play-filter {
+    min-width: 72px;
+}
+
+.game-play.play-hidden {
+    display: none;
+}
+
+.play-period.play-period.hidden {
+    display: none;
+}

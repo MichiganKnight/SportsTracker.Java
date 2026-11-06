@@ -1,0 +1,114 @@
+﻿:root {
+    --st-theme-transition-duration: .2s;
+    --st-theme-transition-easing: ease;
+    
+    --st-interaction-transition-duration: .15s;
+    --st-interaction-transition-easing: ease;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    
+    --st-bg: #17181A;
+
+    --st-surface: #1E2023;
+    --st-surface-alt: #282B30;
+
+    --st-game-team-surface: var(--st-surface-alt);
+
+    --st-card-hover-border: #4A5058;
+    --st-card-hover-shadow: 0 .5rem 1rem rgba(0, 0, 0, .26);
+
+    --st-table-bg: #1E2023;
+    --st-table-header: #25282C;
+    --st-table-row-alt: #22252A;
+    --st-table-hover: #2D3137;
+
+    --st-navbar: #1B1D20;
+    --st-sidebar: #191B1E;
+
+    --st-border: #3A3F46;
+
+    --st-primary: #4C8DFF;
+    --st-success: #35A66F;
+    --st-warning: #D9A624;
+    --st-danger: #E05A63;
+
+    --st-text: #E9ECEF;
+    --st-text-muted: #A7ADB5;
+    
+    --st-primary-rgb: 76, 141, 255;
+    --st-success-rgb: 53, 166, 111;
+    --st-warning-rgb: 217, 166, 36;
+    --st-danger-rgb: 224, 90, 99;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+    
+    --st-bg: #F4F5F7;
+
+    --st-surface: #FAFAFB;
+    --st-surface-alt: #EEF0F2;
+
+    --st-game-team-surface: #DFE3E8;
+
+    --st-card-hover-border: #C7CBD1;
+    --st-card-hover-shadow: 0 .5rem 1rem rgba(0, 0, 0, .10);
+
+    --st-table-bg: #FAFAFB;
+    --st-table-header: #EEF0F2;
+    --st-table-row-alt: #F5F6F8;
+    --st-table-hover: #E8EBEE;
+
+    --st-navbar: #FAFAFB;
+    --st-sidebar: #F3F4F6;
+
+    --st-border: #D6D9DE;
+
+    --st-primary: #2F6FDB;
+    --st-success: #2E8B63;
+    --st-warning: #B98514;
+    --st-danger: #C94D55;
+
+    --st-text: #24272B;
+    --st-text-muted: #666D76;
+    
+    --st-primary-rgb: 47, 111, 219;
+    --st-success-rgb: 46, 139, 99;
+    --st-warning-rgb: 185, 133, 20;
+    --st-danger-rgb: 201, 77, 85;
+}
+
+body,
+main,
+.navbar-sports,
+.sidebar,
+.card,
+.card-header,
+.card-footer,
+.table,
+.table th,
+.table td,
+.table-responsive,
+.list-group-item,
+.form-control,
+.form-select,
+.form-search-sports,
+.theme-toggle,
+.st-surface-alt,
+.game-play,
+.golf-scorecard-container {
+    transition: background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), color var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

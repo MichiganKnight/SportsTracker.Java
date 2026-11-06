@@ -1,0 +1,169 @@
+﻿.hockey-shot-map {
+    padding: 1rem;
+    border: 1px solid var(--st-border);
+    border-radius: .75rem;
+}
+
+.hockey-shot-map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.hockey-shot-map-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hockey-shot-map-header p {
+    font-size: .75rem;
+    color: var(--st-text-muted);
+    margin: .25rem 0 0;
+}
+
+.hockey-shot-map-count {
+    font-size: .75rem;
+    color: var(--st-text-muted);
+}
+
+.hockey-shot-map-filters {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.hockey-shot-map-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    font-size: .75rem;
+}
+
+.hockey-shot-map-filters select {
+    padding: .4rem .6rem;
+    border: 1px solid var(--st-border);
+    border-radius: .4rem;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+.hockey-goals-toggle {
+    flex-direction: row !important;
+    align-items: center;
+    padding-bottom: .4rem;
+}
+
+.hockey-shot-map-rink svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.hockey-map-ice {
+    fill: #edf6fb;
+    stroke: #8ba5b6;
+    stroke-width: 1;
+}
+
+.hockey-map-center-line,
+.hockey-map-goal-line {
+    stroke: #cf3e4b;
+    stroke-width: .8;
+}
+
+.hockey-map-blue-line {
+    stroke: #397dc3;
+    stroke-width: 1.6;
+}
+
+.hockey-map-faceoff {
+    fill: none;
+    stroke: #cf3e4b;
+    stroke-width: .6;
+}
+
+.hockey-map-net {
+    fill: none;
+    stroke: #cf3e4b;
+    stroke-width: 1;
+}
+
+.hockey-map-shot {
+    stroke: white;
+    stroke-width: .6;
+    cursor: pointer;
+    transition: opacity .15s ease;
+}
+
+.hockey-map-shot:hover {
+    stroke: #111;
+    stroke-width: 1.2;
+}
+
+.hockey-map-shot--goal,
+.hockey-legend-goal {
+    fill: #dc3545;
+    background: #dc3545;
+}
+
+.hockey-map-shot--saved,
+.hockey-legend-saved {
+    fill: #2679c7;
+    background: #2679c7;
+}
+
+.hockey-map-shot--missed,
+.hockey-legend-missed {
+    fill: #8b98a5;
+    background: #8b98a5;
+}
+
+.hockey-shot-map-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: .75rem;
+    font-size: .75rem;
+}
+
+.hockey-legend-dot {
+    display: inline-block;
+    width: .55rem;
+    height: .55rem;
+    border-radius: 50%;
+    margin-right: .25rem;
+}
+
+.hockey-rink-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    gap: 1rem;
+}
+
+.hockey-rink-team {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.hockey-rink-team-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.hockey-rink-orientation {
+    font-size: .7rem;
+    color: var(--st-text-muted);
+    text-align: center;
+}

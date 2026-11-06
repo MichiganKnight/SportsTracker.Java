@@ -1,0 +1,101 @@
+@import url("themes/theme.css");
+
+@import url("layout/footer.css");
+@import url("layout/layout.css");
+@import url("layout/navbar.css");
+@import url("layout/sidebar.css");
+
+@import url("components/athlete.css");
+@import url("components/boxscore.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/dashboard.css");
+@import url("components/game-details.css");
+@import url("components/games.css");
+@import url("components/league-leaders.css");
+@import url("components/news.css");
+@import url("components/playbyplay.css");
+@import url("components/search.css");
+@import url("components/standings.css");
+@import url("components/tables.css");
+@import url("components/team.css");
+@import url("components/team-row.css");
+
+@import url("components/situations/football.css");
+@import url("components/situations/baseball.css");
+@import url("components/situations/golf.css");
+@import url("components/situations/hockey.css");
+@import url("components/situations/hockey-rink.css");
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.league-header {
+    border-bottom: 1px solid var(--st-border);
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+.league-nfl {
+    border-left: 4px solid #2E8B57;
+}
+
+.league-mlb {
+    border-left: 4px solid #005A9C;
+}
+
+.league-nba {
+    border-left: 4px solid #C8102E;
+}
+
+.league-nhl {
+    border-left: 4px solid #6C757D;
+}
+
+.league-cfb {
+    border-left: 4px solid #FF8200;
+}
+
+.league-cbb {
+    border-left: 4px solid #7A3E00;
+}
+
+.league-pga {
+    border-left: 4px solid #198754;
+}
+
+@keyframes leagueUpdate {
+    0% {
+        opacity: .4;
+        transform: scale(.99);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.league-updated {
+    animation: leagueUpdate .35s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #dee2e6;
+    box-shadow: none;
+    outline: 0;
+}
+
+.btn:focus,
+.btn:active.focus {
+    box-shadow: none;
+    outline: 0;
+}

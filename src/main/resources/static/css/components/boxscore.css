@@ -1,0 +1,148 @@
+﻿/* Box Score */
+
+.boxscore-team-header {
+    padding: .8rem 1rem;
+}
+
+.boxscore-team-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.boxscore-stat-section + .boxscore-stat-section {
+    margin-top: .75rem;
+    border-top: 1px solid var(--st-border);
+}
+
+.boxscore-stat-heading {
+    padding: .65rem 1rem;
+    background-color: var(--st-surface-alt);
+    color: var(--st-text);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--st-border);
+}
+
+.boxscore-table {
+    color: var(--st-text);
+}
+
+.boxscore-table thead th {
+    padding: .55rem .65rem;
+    background: rgba(255, 255, 255, .02);
+    border-color: var(--st-border);
+    color: var(--st-text);
+    font-size: .68rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.boxscore-table tbody td {
+    padding: .55rem .65rem;
+    border-color: var(--st-border);
+    font-size: .78rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.boxscore-table thead .boxscore-player-column {
+    z-index: 2;
+    background: var(--st-surface);
+}
+
+.boxscore-player-image {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;    
+}
+
+.boxscore-bat-order {
+    min-width: 16px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.boxscore-player-substitute {
+    padding-left: 1.1rem;
+}
+
+.boxscore-player-substitute .boxscore-player-name::before {
+    content: "↳";
+    margin-right: .35rem;
+}
+
+.boxscore-player-info {
+    min-width: 0;
+}
+
+.boxscore-player-name {
+    font-size: .8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.boxscore-player-note {
+    font-size: .68rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.boxscore-player-position {
+    margin-top: .05rem;
+    font-size: .66rem;
+}
+
+.boxscore-totals-row {
+    background-color: var(--st-surface-alt);
+}
+
+.boxscore-totals-row td {
+    border-top: 1px solid var(--st-border);
+}
+
+.boxscore-sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.boxscore-sortable:hover {
+    color: var(--st-text);
+}
+
+.boxscore-sort-header {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.boxscore-sort-icon {
+    font-size: .65rem;
+    opacity: .55;
+}
+
+.boxscore-sortable:hover .boxscore-sort-icon {
+    opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+    .boxscore-player-column {
+        min-width: 160px;
+    }
+
+    .boxscore-player-image {
+        width: 26px;
+        height: 26px;
+
+        flex-basis: 26px;
+    }
+
+    .boxscore-table tbody td,
+    .boxscore-table thead th {
+        padding: .5rem;
+    }
+}

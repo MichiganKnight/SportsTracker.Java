@@ -1,0 +1,185 @@
+﻿/* Standings */
+.season-selector {
+    padding: 0.75rem;
+    background-color: var(--st-surface-alt);
+    border: 1px solid var(--st-border);
+    border-radius: 0.75rem;
+}
+
+.season-selector-field {
+    min-width: 140px;
+}
+
+.season-selector-field:last-of-type {
+    min-width: 180px;
+}
+
+.season-selector .form-label {
+    font-weight: 500;
+}
+
+.season-selector-select {
+    color: var(--st-text);
+    background-color: var(--st-surface);
+    border-color: var(--st-border);
+}
+
+.season-selector-select:hover {
+    border-color: var(--st-border);
+}
+
+.season-selector-select:focus {
+    color: var(--st-text);
+    background-color: var(--st-surface);
+    border-color: var(--st-border);
+    box-shadow: 0 0 0 .2rem rgba(var(--st-primary-rgb), .15);
+}
+
+.standings-table {
+    margin: 0;
+    color: var(--st-text);
+}
+
+.standings-table thead th {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-bottom: 1px solid var(--st-border);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.standings-table tbody td {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+    border-color: var(--st-border);
+    vertical-align: middle;
+}
+
+.standings-table tbody tr {
+    transition: background-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.standings-table tbody tr:hover {
+    background: rgba(255, 255, 255, .035);
+}
+
+.standings-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Group Header */
+
+.standings-group-header {
+    padding: .8rem 1rem;
+    background: rgba(255, 255, 255, .025);
+    border-bottom: 1px solid var(--st-border);
+}
+
+.standings-group-header h5 {
+    font-size: .95rem;
+    font-weight: 700;
+}
+
+.standings-group-abbreviation {
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+/* Ranking */
+
+.standings-rank {
+    width: 48px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+/* Team */
+
+.standings-team {
+    min-width: 210px;
+}
+
+.standings-team-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+}
+
+.standings-team-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.standings-team-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.standings-team-name {
+    font-size: .86rem;
+    font-weight: 650;
+    line-height: 1.15;
+}
+
+.standings-team-abbreviation {
+    margin-top: .1rem;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+}
+
+/* Values */
+
+.standings-table td.text-end {
+    font-size: .82rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.standings-positive {
+    color: #75b798;
+    font-weight: 600;
+}
+
+.standings-negative {
+    color: #ea868f;
+    font-weight: 600;
+}
+
+/* Standings Filters */
+
+.standings-view-filter .btn {
+    min-width: 82px;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+    .standings-team {
+        min-width: 170px;
+    }
+
+    .standings-team-name {
+        font-size: .82rem;
+    }
+
+    .standings-team-logo-wrap {
+        width: 28px;
+        height: 28px;
+
+        flex-basis: 28px;
+    }
+
+    .standings-team-logo {
+        width: 24px;
+        height: 24px;
+    }
+}

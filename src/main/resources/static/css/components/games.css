@@ -1,0 +1,395 @@
+﻿/* --------------------------------
+   Date Navigation
+-------------------------------- */
+
+.games-date-card {
+    background: var(--st-table-bg);
+    border: 1px solid var(--st-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.games-date-navigation {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: stretch;
+    min-height: 88px;
+}
+
+.games-date-nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    min-width: 120px;
+    padding: 0 1.25rem;
+
+    color: var(--st-text-muted);
+    text-decoration: none;
+
+    transition:
+            color 0.15s ease,
+            background-color 0.15s ease;
+}
+
+.games-date-nav-button:first-child {
+    border-right: 1px solid var(--st-border);
+}
+
+.games-date-nav-button:last-child {
+    border-left: 1px solid var(--st-border);
+}
+
+.games-date-nav-button:hover {
+    color: var(--st-text);
+    background: var(--st-table-hover);
+}
+
+.games-date-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1rem;
+}
+
+.games-date-heading {
+    color: var(--st-text);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.games-date-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    margin-top: 0.25rem;
+}
+
+.games-change-date-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    padding: 0;
+
+    color: var(--st-text-muted);
+    font-size: 0.85rem;
+
+    background: none;
+    border: 0;
+}
+
+.games-change-date-button:hover {
+    color: var(--st-text);
+}
+
+.games-date-divider {
+    width: 3px;
+    height: 3px;
+
+    background: var(--st-text-muted);
+    border-radius: 50%;
+}
+
+.games-today-link {
+    color: var(--bs-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.games-today-link:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------
+   Date Picker Modal
+-------------------------------- */
+
+.games-date-modal-dialog {
+    max-width: 420px;
+}
+
+.games-date-modal {
+    overflow: hidden;
+
+    color: var(--st-text);
+    background: var(--st-table-bg);
+
+    border: 1px solid var(--st-border);
+    border-radius: 0.85rem;
+
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+
+/* --------------------------------
+   Modal Header
+-------------------------------- */
+
+.games-date-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 1.25rem 1.25rem 1rem;
+
+    border-bottom: 1px solid var(--st-border);
+}
+
+.games-date-modal-title {
+    margin: 0;
+
+    color: var(--st-text);
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.games-date-modal-subtitle {
+    margin-top: 0.2rem;
+
+    color: var(--st-text-muted);
+
+    font-size: 0.8rem;
+}
+
+.games-date-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin: -0.25rem -0.25rem 0 1rem;
+
+    color: var(--st-text-muted);
+
+    background: transparent;
+    border: 0;
+    border-radius: 0.4rem;
+
+    transition:
+            color 0.15s ease,
+            background-color 0.15s ease;
+}
+
+.games-date-modal-close:hover {
+    color: var(--st-text);
+    background: var(--st-table-hover);
+}
+
+
+/* --------------------------------
+   Modal Body
+-------------------------------- */
+
+.games-date-modal-body {
+    padding: 1.25rem;
+}
+
+
+/* --------------------------------
+   Calendar Header
+-------------------------------- */
+
+.games-calendar-header {
+    display: grid;
+    grid-template-columns: 36px 1fr 36px;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.games-calendar-month {
+    color: var(--st-text);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.games-calendar-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    color: var(--st-text-muted);
+
+    background: transparent;
+    border: 1px solid var(--st-border);
+    border-radius: 0.45rem;
+
+    transition:
+            color 0.15s ease,
+            background-color 0.15s ease,
+            border-color 0.15s ease;
+}
+
+.games-calendar-nav:hover {
+    color: var(--st-text);
+
+    background: var(--st-table-hover);
+}
+
+
+/* --------------------------------
+   Calendar
+-------------------------------- */
+
+.games-calendar-weekdays,
+.games-calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 0.3rem;
+}
+
+.games-calendar-weekdays {
+    margin-bottom: 0.35rem;
+}
+
+.games-calendar-weekdays span {
+    padding-block: 0.25rem;
+
+    color: var(--st-text-muted);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.games-calendar-day,
+.games-calendar-empty {
+    aspect-ratio: 1;
+}
+
+.games-calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 0;
+
+    color: var(--st-text);
+
+    font-size: 0.875rem;
+
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 0.45rem;
+
+    transition:
+            color 0.15s ease,
+            background-color 0.15s ease,
+            border-color 0.15s ease;
+}
+
+.games-calendar-day:hover {
+    background: var(--st-table-hover);
+    border-color: var(--st-border);
+}
+
+.games-calendar-day.is-today {
+    color: var(--bs-primary);
+
+    border-color: var(--bs-primary);
+
+    font-weight: 600;
+}
+
+.games-calendar-day.is-selected {
+    color: #fff;
+
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+
+    font-weight: 600;
+}
+
+.games-calendar-day.is-selected:hover {
+    background: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+
+/* --------------------------------
+   Modal Footer
+-------------------------------- */
+
+.games-date-modal-footer {
+    display: flex;
+    justify-content: center;
+
+    padding: 0.85rem 1.25rem;
+
+    background: var(--st-table-header);
+
+    border-top: 1px solid var(--st-border);
+}
+
+.games-calendar-today-button {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--bs-primary);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.games-calendar-today-button:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------
+   Modal Backdrop
+-------------------------------- */
+
+.modal-backdrop.show {
+    opacity: 0.65;
+}
+
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
+
+@media (max-width: 767.98px) {
+    .games-date-navigation {
+        min-height: 78px;
+    }
+
+    .games-date-nav-button {
+        min-width: 48px;
+        padding: 0 0.75rem;
+    }
+
+    .games-date-heading {
+        font-size: 0.95rem;
+    }
+
+    .games-date-modal-dialog {
+        margin-inline: 0.75rem;
+    }
+}

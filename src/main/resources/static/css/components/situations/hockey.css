@@ -1,0 +1,203 @@
+﻿/* Hockey Situation */
+
+.hockey-situation {
+    width: 100%;
+}
+
+.hockey-rink-wrapper {
+    width: 100%;
+}
+
+.hockey-rink {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    border: 2px solid var(--st-border);
+    border-radius: 42px;
+    background-color: #edf5fa;
+}
+
+/* Center and Blue Lines */
+
+.hockey-center-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: #c63b47;
+}
+
+.hockey-blue-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #3979b9;
+}
+
+.hockey-blue-line-left {
+    left: 30%;
+}
+
+.hockey-blue-line-right {
+    right: 30%;
+}
+
+/* Center Ice */
+
+.hockey-center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #c63b47;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hockey-faceoff-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #c63b47;
+    transform: translate(-50%, -50%);
+}
+
+/* Goal Lines */
+
+.hockey-goal-line {
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    width: 2px;
+    background-color: #c63b47;
+}
+
+.hockey-goal-line-left {
+    left: 10%;
+}
+
+.hockey-goal-line-right {
+    right: 10%;
+}
+
+/* Goals */
+
+.hockey-goal {
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 22px;
+    border: 2px solid #c63b47;
+    background-color: rgba(57, 121, 185, .12);
+    transform: translateY(-50%);
+}
+
+.hockey-goal-left {
+    left: 10%;
+    border-radius: 0 5px 5px 0;
+    transform: translate(-100%, -50%);
+}
+
+.hockey-goal-right {
+    right: 10%;
+    border-radius: 5px 0 0 5px;
+    transform: translate(100%, -50%);
+}
+
+/* Faceoff Circles */
+
+.hockey-faceoff-circle {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #c63b47;
+    border-radius: 50%;
+}
+
+.hockey-faceoff-left-top {
+    left: 16%;
+    top: 10%;
+}
+
+.hockey-faceoff-left-bottom {
+    left: 16%;
+    bottom: 10%;
+}
+
+.hockey-faceoff-right-top {
+    right: 16%;
+    top: 10%;
+}
+
+.hockey-faceoff-right-bottom {
+    right: 16%;
+    bottom: 10%;
+}
+
+/* Situation Details */
+
+.hockey-situation-info {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    margin-top: .5rem;
+    font-size: .85rem;
+}
+
+.hockey-strength {
+    font-size: .78rem;
+}
+
+.hockey-power-play {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    color: #d59a19;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+/* Latest NHL Play */
+
+.hockey-last-play {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-top: .35rem;
+    padding-top: .65rem;
+    border-top: 1px solid var(--st-border);
+}
+
+.hockey-last-play-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hockey-section-label {
+    color: var(--st-text-muted, #88929e);
+    font-size: .66rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.hockey-play-team {
+    font-size: .72rem;
+    font-weight: 700;
+}
+
+.hockey-play-description {
+    color: var(--st-text);
+    font-size: .8rem;
+    line-height: 1.4;
+}

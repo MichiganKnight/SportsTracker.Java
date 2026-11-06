@@ -1,0 +1,184 @@
+﻿/* League News */
+.news-article-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Article Header */
+.news-article-header {
+    max-width: 860px;
+    margin-bottom: 2rem;
+}
+
+.news-article-headline {
+    color: var(--st-text);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+}
+
+.news-article-description {
+    color: var(--st-text-muted);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.news-article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--st-text-muted);
+    font-size: 0.9rem;
+}
+
+.news-article-meta-separator::before {
+    content: "•";
+    margin-right: 0.5rem;
+}
+
+/* Hero Image */
+.news-article-figure {
+    margin: 0 0 2rem;
+}
+
+.news-article-image {
+    display: block;
+    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
+    border: 1px solid var(--st-border);
+    border-radius: 0.5rem;
+}
+
+.news-article-caption {
+    margin-top: 0.65rem;
+    color: var(--st-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+/* Article Body Card */
+.news-article-body-card {
+    width: 100%;
+    max-width: none;
+    padding: 2rem 2.25rem;
+    background-color: var(--st-surface);
+    color: var(--st-text);
+    border: 1px solid var(--st-border);
+    border-radius: 0.5rem;
+    transition: background-color var(--st-theme-transition-duration) var(--st-theme-transition-easing), color var(--st-theme-transition-duration) var(--st-theme-transition-easing), border-color var(--st-theme-transition-duration) var(--st-theme-transition-easing);
+}
+
+/* Article Body */
+.league-news-article-body {
+    max-width: none;
+    color: var(--st-text);
+    font-size: 1.075rem;
+    line-height: 1.8;
+}
+
+.league-news-article-body p {
+    margin-bottom: 1.5rem;
+}
+
+.league-news-article-body h2,
+.league-news-article-body h3,
+.league-news-article-body h4 {
+    color: var(--st-text);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.league-news-article-body h2 {
+    font-size: 1.65rem;
+}
+
+.league-news-article-body h3 {
+    font-size: 1.4rem;
+}
+
+.league-news-article-body h4 {
+    font-size: 1.2rem;
+}
+
+.league-news-article-body ul,
+.league-news-article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.75rem;
+}
+
+.league-news-article-body li {
+    margin-bottom: 0.5rem;
+}
+
+.league-news-article-body blockquote {
+    margin: 2rem 0;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    background-color: var(--st-surface-alt);
+    color: var(--st-text);
+    border-left: 4px solid var(--st-primary);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Article Links */
+.league-news-article-body a {
+    color: var(--st-primary);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing), border-color var(--st-interaction-transition-duration) var(--st-interaction-transition-easing);
+}
+
+.league-news-article-body a:hover {
+    color: var(--st-primary);
+    border-bottom-color: var(--st-primary);
+}
+
+.news-article-footer {
+    max-width: none;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    color: var(--st-text-muted);
+    border-top: 1px solid var(--st-border);
+    background: transparent !important;
+}
+
+.news-article-footer a {
+    color: var(--st-primary);
+    text-decoration: none;
+}
+
+.news-article-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .news-article-headline {
+        font-size: 2rem;
+    }
+
+    .news-article-description {
+        font-size: 1.05rem;
+    }
+
+    .news-article-body-card {
+        padding: 1.5rem;
+    }
+
+    .league-news-article-body {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .news-article-image {
+        max-height: 420px;
+    }
+}
