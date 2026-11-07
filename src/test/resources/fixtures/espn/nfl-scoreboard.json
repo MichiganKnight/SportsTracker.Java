@@ -30,7 +30,7 @@
         {
             "id": "123456789",
             "name": "Green Bay Packers at Chicago Bears",
-            "date": "2026-11-08T18:00Z",
+            "date": "2026-11-08T18:00:00Z",
             "neutralSite": false,
             "competitions": [
                 {

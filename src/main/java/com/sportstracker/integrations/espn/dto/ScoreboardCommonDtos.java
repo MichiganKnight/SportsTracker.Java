@@ -32,7 +32,7 @@ public final class ScoreboardCommonDtos {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public record TeamDto(String id, String location, String name, String nickname, String displayName, String abbreviation, String color, String alternateColor, String Logo, List<EspnLogoDto> logos) {
+    public record TeamDto(String id, String location, String name, String nickname, String displayName, String abbreviation, String color, String alternateColor, String logo, List<EspnLogoDto> logos) {
         public TeamDto {
             logos = logos == null ? List.of() : List.copyOf(logos);
         }
